@@ -17,21 +17,11 @@ To configure you need to open:
 - app/config/mail.php
   - You will need to change host, port, from, username, and password
 
-Also, install a users table of this kind:
+
+You can run the migration the usual way
 
 ```
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(50) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `password_temp` varchar(60) NOT NULL,
-  `code` varchar(60) NOT NULL,
-  `active` int(11) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+php artisan migrate
 ```
 
 And you will be good to go.
