@@ -3,13 +3,17 @@ Laravel-Login
 
 A basic membership system made with Laravel. Functionalities include Sign In, Sign Out, Forgot password, Sign Up, and Email activation. The design is responsive and made with Bootstrap v3.1.1.
 
+I use this everytime I start a project that requires a login system.
+
 Configure
 =========
 
 To configure you need to open:
 
 - app/config/database.php
+  - You will need to change your default driver and its info: host, database, username, and password.
 - app/config/mail.php
+  - You will need to change host, port, from, username, and password
 
 Also, install a users table of this kind:
 
