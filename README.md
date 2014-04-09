@@ -5,6 +5,8 @@ A basic membership system made with Laravel. Functionalities include Sign In, Si
 
 I use this everytime I start a project that requires a login system.
 
+<img src="https://raw.github.com/parinparikh/Laravel-Login/master/public/assets/img/screenshot.png" width="350px" alt=" Screenshot" />
+
 Configure
 =========
 
