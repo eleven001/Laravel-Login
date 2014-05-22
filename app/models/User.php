@@ -5,7 +5,7 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	protected $fillable = array('name', 'email', 'password', 'password_temp', 'code', 'active');
+	protected $fillable = array('name', 'email', 'password', 'password_temp', 'code', 'active', 'remember_token');
 
 	/**
 	 * The database table used by the model.
@@ -50,5 +50,26 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->email;
 	}
+
+	/**
+	 * Fix for Laravel 4.1 Sessions
+	 */
+	public function getRememberToken()
+	{
+	    return $this->remember_token;
+	}
+
+
+	public function setRememberToken($value)
+	{
+	    $this->remember_token = $value;
+	}
+
+
+	public function getRememberTokenName()
+	{
+	    return 'remember_token';
+	}
+
 
 }

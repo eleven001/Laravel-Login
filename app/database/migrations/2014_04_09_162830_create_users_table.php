@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration {
 			$table->string('password_temp');
 			$table->string('code');
 			$table->integer('active');
+			$table->string('remember_token');
 			$table->timestamps();
 
 		});
